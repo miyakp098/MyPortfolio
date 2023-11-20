@@ -1,0 +1,495 @@
+@charset "UTF-8";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-size: 100%;
+  font-family: "Terminal", sans-serif;
+}
+h1{
+  font-family: "游ゴシック","Yu Gothic","YuGothic", sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+h2{
+  font-family: "游ゴシック","Yu Gothic","YuGothic", sans-serif;
+}
+h3{
+  font-family: "游ゴシック","Yu Gothic","YuGothic", sans-serif;
+}
+p{
+  line-height: 1.7;
+}
+
+/* HEADER
+------------------------*/
+.main-nav{
+  display: flex;
+  font-size: 18px;
+  list-style: none;  
+}
+
+.main-nav li{
+  margin-right: 36px;
+}
+
+.main-nav a{
+  color: rgb(255, 255, 255);
+  text-decoration: none; /* 追加：アンカータグの下線を消去 */
+}
+
+.main-nav a:hover{
+  color: rgb(212, 212, 212);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed; /* 追加：ヘッダーを画面上部に固定 */
+  top: 0; /* 追加：上部から0ピクセルの位置に設定 */
+  
+}
+.wrapper{
+  width: 100%; /* 追加：幅を画面全体に拡張 */
+  margin: 0 auto;
+  padding:  0 4%;
+  background-color: #658baf;
+  position: fixed; /* 追加: 要素を固定位置に配置 */
+  top: 0; /* 画面の上端から配置 */
+  left: 0; /* 画面の左端から配置 */
+  right: 0; /*画面の右端から配置 */
+  z-index: 100; /* 要素の重なり順を管理 */
+  box-sizing: border-box;
+}
+/*フッター
+-----------------------------*/
+footer{
+  background: #658baf;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p{
+  color: #fff;
+  font-size: 24px;
+}
+footer p img{
+  width: 32px; /* アイコンの幅を調整 */
+  height: auto; /* アイコンの高さを自動調整 */
+  margin-right: 10px; /* テキストとの間隔 */
+}
+
+/*
+-----------------------------*/
+
+
+
+#home {
+  background-color: #f5ece3; /* 背景 */
+  padding: 20px 30px;
+  box-sizing: border-box;
+  margin: 1% auto;
+  width: 1200px;
+}
+
+#home h2 {
+  text-align: center; /* タイトルを中央揃えに */
+  margin-bottom: 20px; /* タイトルとカラムの間の余白 */
+}
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#home .column, #home .column-profile {
+  flex: 1; 
+  margin: 10px 10px; /* カラム間の余白 */
+  padding: 20px;
+  background-color: #fff; /* 背景色を白に */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影をつける */
+}
+
+#home .column-profile {
+  flex: none; /* このカラムのサイズをflexベースで決定しない */
+}
+.profile-image {
+  width: 200px; /* 幅を200ピクセルに設定 */
+}
+
+
+#home h3 {
+  margin-bottom: 10px;
+  color: #333; /* タイトルの色 */
+  border-bottom: 2px solid #333; /* 下線を追加 */
+}
+
+#home .column-profile h3 {
+  border-bottom: none; /* 下線を取り除く */
+}
+
+#home ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#home li {
+  margin-bottom: 5px; /* リストアイテムの間隔 */
+}
+
+#home .column img, #home .column-profile img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px; /* 画像の下に余白を追加 */
+}
+
+#home .comment-box h3 {
+  border-bottom: none; /* 下線を取り除く */
+}
+
+
+.comment-box {
+  background-color: #fff; /* 背景色を白に設定 */
+  padding: 20px; /* 内部の余白を設定 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影をつける */
+  margin: 10px 10px;
+}
+
+.separator-line {
+  border: none;
+  height: 2px; /* 線の厚み */
+  background-color: #797979; /* 線の色 */
+  margin: 40px 0; /* 上下の余白 */
+
+}
+
+
+#sns {
+  background-color: #fff;
+  padding: 20px 20px;
+  text-align: left;
+  margin: 20px 10px;
+}
+
+#sns button {
+  background-color: #FFCC00;
+  border: none;
+  color: #333;
+  padding: 12px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 12px;
+  cursor: pointer;
+}
+
+#works {
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 45%;
+  margin: auto; /* margin: 10px 0; */
+  height: auto;
+  min-height: 670px; /* 最小の高さを設定 */
+}
+
+.works-style .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-style .image-placeholder {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.works-style .text-container {
+  max-width: 100%;
+}
+
+.works-style h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.works-style .game-button {
+  background-color: #4CAF50; 
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 12px;
+  cursor: pointer;
+
+}
+
+.works-style .game-button:hover {
+  background-color: #45a049;
+}
+
+.sections-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.sections-container .section {
+  margin-bottom: 20px; 
+}
+.youtube-iframe {
+  width: 560px; /* 幅を560ピクセルに設定 */
+  height: 315px; /* 高さを315ピクセルに設定 */
+}
+
+
+
+
+@media screen and (max-width:800px){
+  h1{
+    font-family: "游ゴシック","Yu Gothic","YuGothic", sans-serif;
+    font-size: 12px;
+    color: #fff;
+  }
+  h2{
+    font-family: "游ゴシック","Yu Gothic","YuGothic", sans-serif;
+  }
+  h3{
+    font-family: "游ゴシック","Yu Gothic","YuGothic", sans-serif;
+  }
+  p{
+    line-height: 1.7;
+  }
+  
+  /* HEADER
+  ------------------------*/
+  .main-nav{
+    display: flex;
+    font-size: 10px;
+    list-style: none;  
+  }
+  
+  .main-nav li{
+    margin-right: 10px;
+  }
+  
+  .main-nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  .main-nav a:hover{
+    color: rgb(212, 212, 212);
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* 追加：ヘッダーを画面上部に固定 */
+    top: 0; /* 追加：上部から0ピクセルの位置に設定 */
+    
+  }
+  .wrapper{
+    width: 100%; /* 追加：幅を画面全体に拡張 */
+    margin: 0 auto;
+    padding:  0 4%;
+    background-color: #658baf;
+    position: fixed; /* 追加: 要素を固定位置に配置 */
+    z-index: 100; /* 要素の重なり順を管理 */
+    box-sizing: border-box;
+  }
+  /*フッター
+  -----------------------------*/
+  footer{
+    background: #658baf;
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+  footer p{
+    color: #fff;
+    font-size: 10px;
+  }
+  footer p img{
+    width: 15px; /* アイコンの幅を調整 */
+    height: auto; /* アイコンの高さを自動調整 */
+    margin-right: 10px; /* テキストとの間隔 */
+  }
+  
+  /*
+  -----------------------------*/
+  
+  
+  
+  #home {
+    background-color: #f5ece3; /* 背景 */
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin: 1% auto;
+    width: 100%;
+  }
+  
+  #home h2 {
+    text-align: center; /* タイトルを中央揃えに */
+    margin-bottom: 20px; /* タイトルとカラムの間の余白 */
+  }
+  .columns-container {
+    display: block;
+    justify-content: space-between;
+  }
+  
+  #home .column, #home .column-profile {
+    flex: 1; /* カラムが等しい幅になるように */
+    margin: 10px 10px; /* カラム間の余白 */
+    padding: 20px;
+    background-color: #fff; /* 背景色を白に */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影をつける */
+  }
+  
+  #home .column-profile {
+    flex: none; 
+  }
+  .profile-image {
+    width: 100%; /* 幅を200ピクセルに設定 */
+  }
+  #home h3 {
+    margin-bottom: 10px;
+    color: #333; /* タイトルの色 */
+    border-bottom: 2px solid #333; /* 下線を追加 */
+  }
+  
+  #home .column-profile h3 {
+    border-bottom: none; /* 下線を取り除く */
+  }
+  
+  #home ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #home li {
+    margin-bottom: 5px; /* リストアイテムの間隔 */
+  }
+  
+  #home .column img, #home .column-profile img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px; /* 画像の下に余白を追加 */
+  }
+  
+  #home .comment-box h3 {
+    border-bottom: none; /* 下線を取り除く */
+  }
+  
+  
+  .comment-box {
+    background-color: #fff; /* 背景色を白に設定 */
+    padding: 20px; /* 内部の余白を設定 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 影をつける */
+    margin: 10px 10px;
+  }
+  
+  .separator-line {
+    border: none;
+    height: 2px; /* 線の厚み */
+    background-color: #797979; /* 線の色 */
+    margin: 20px 0; /* 上下の余白 */
+  
+  }
+  
+  
+  #sns {
+    background-color: #fff;
+    padding: 10px 10px;
+    text-align: left;
+    margin: 10px 10px;
+  }
+  
+  #sns button {
+    background-color: #FFCC00;
+    border: none;
+    color: #333;
+    width: 60%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 10px auto;
+  }
+  
+  #works {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    height: auto;
+  }
+  
+  .works-style .image-container {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .works-style .image-placeholder {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .works-style .text-container {
+    max-width: 100%;
+  }
+  
+  .works-style h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .works-style .game-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 5px auto;
+    cursor: pointer;  
+  }
+  
+  .works-style .game-button:hover {
+    background-color: #45a049;
+  }
+  
+  .sections-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .sections-container .section {
+    margin-bottom: 20px; 
+  }
+  .youtube-iframe {
+    width: 100%;
+    height: auto;
+  }
+}
