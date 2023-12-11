@@ -192,11 +192,10 @@ footer p img{
   box-sizing: border-box;
   width: 100%;
   max-width: 45%;
-  margin: auto; /* margin: 10px 0; */
+  margin: auto;
   height: auto;
-  min-height: 670px; /* 最小の高さを設定 */
+  min-height: 750px; /* 最小の高さを設定 */  
 }
-
 .works-style .image-container {
   width: 100%;
   display: flex;
