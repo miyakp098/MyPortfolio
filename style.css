@@ -227,7 +227,7 @@ footer p img{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0px 12px;
+  margin: 10px 12px;
   cursor: pointer;
 
 }
@@ -251,7 +251,10 @@ footer p img{
   height: 315px; /* 高さを315ピクセルに設定 */
 }
 
-
+/*間隔をあける*/
+.spacer {
+  height: 10px; 
+}
 
 
 @media screen and (max-width:800px){
